@@ -1,10 +1,10 @@
 Script started on Wed May 31 15:36:27 2023
-]0;root@localhost:~[?1034h[root@localhost ~]# l[Kvgs
+]0;root@localhost:~[?1034h[root@localhost ~]# l[Kvgs    ####Видим что имя группы сменилось
   VG   #PV #LV #SN Attr   VSize   VFree
   test   1   2   0 wz--n- <38.97g    0 
 ]0;root@localhost:~[root@localhost ~]# pwd
 /root
-]0;root@localhost:~[root@localhost ~]# yum install git iy
+]0;root@localhost:~[root@localhost ~]# yum install git   ####Устанвливаем гит, чтобы скачать дополнительные модули intitrd
 Failed to set locale, defaulting to C
 Loaded plugins: fastestmirror
 Determining fastest mirrors
@@ -967,7 +967,7 @@ Dependency Installed:
   perl-threads-shared.x86_64 0:1.43-6.el7                                       
 
 Complete!
-]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/ac45d7a6c6856bae 
+]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/ac45d7a6c6856bae ####копируем скрипт
 a348e64fac43faf0
 Cloning into 'ac45d7a6c6856baea348e64fac43faf0'...
 remote: Enumerating objects: 3, done.[K
@@ -979,7 +979,7 @@ Unpacking objects: 100% (3/3), done.
 ]0;root@localhost:~[root@localhost ~]# ls
 [0m[38;5;27mac45d7a6c6856baea348e64fac43faf0[0m  original-ks.cfg  typescript1
 anaconda-ks.cfg                   typescript
-]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/e51b2580b47bb5a1 
+]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/e51b2580b47bb5a1  ####копируем скрипт с гита
 50bd1a002f16ae85
 Cloning into 'e51b2580b47bb5a150bd1a002f16ae85'...
 remote: Enumerating objects: 3, done.[K
@@ -1004,7 +1004,7 @@ dracut[K[K[K[K[K
 
 lib/     lib64/   libexec/ 
 [root@localhost ~]# cp ./ac45d7a6c6856baea348e64fac43faf0/gistfile1.txt /usr/lib 
-/dracut/modules.d/01test/
+/dracut/modules.d/01test/ ####переносим скрипты в папку для будущего модуля и переименовываем их
 ]0;root@localhost:~[root@localhost ~]# cd ./e51b2580b47bb5a150bd1a002f16ae85/.git/
 branches/ hooks/    info/     logs/     objects/  refs/     
 [root@localhost ~]# cd ./e51b2580b47bb5a150bd1a002f16ae85/.git/
@@ -1095,184 +1095,12 @@ install() {
 [?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# v[Kmv gistfile1.txt module_setup.sh
 ]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
 module_setup.sh  test.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  dracut -f -v
-Executing: /sbin/dracut -f -v
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-*** Including module: bash ***
-*** Including module: nss-softokn ***
-*** Including module: i18n ***
-*** Including module: drm ***
-*** Including module: plymouth ***
-*** Including module: dm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 60-persistent-storage-dm.rules
-Skipping udev rule: 55-dm.rules
-*** Including module: kernel-modules ***
-Omitting driver floppy
-*** Including module: lvm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 56-lvm.rules
-Skipping udev rule: 60-persistent-storage-lvm.rules
-*** Including module: qemu ***
-*** Including module: resume ***
-*** Including module: rootfs-block ***
-*** Including module: terminfo ***
-*** Including module: udev-rules ***
-Skipping udev rule: 40-redhat-cpu-hotplug.rules
-Skipping udev rule: 91-permissions.rules
-*** Including module: biosdevname ***
-*** Including module: systemd ***
-*** Including module: usrmount ***
-*** Including module: base ***
-*** Including module: fs-lib ***
-*** Including module: shutdown ***
-*** Including modules done ***
-*** Installing kernel module dependencies and firmware ***
-*** Installing kernel module dependencies and firmware done ***
-*** Resolving executable dependencies ***
-*** Resolving executable dependencies done***
-*** Hardlinking files ***
-*** Hardlinking files done ***
-*** Stripping files ***
-*** Stripping files done ***
-*** Generating early-microcode cpio image contents ***
-*** Constructing AuthenticAMD.bin ****
-*** No early-microcode cpio image needed ***
-*** Store current command line parameters ***
-*** Creating image file ***
-*** Creating image file done ***
-*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes 
-t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# test[K[K[K[K lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes 
-t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# test[K[K[K[K lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
-t
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[C[C'
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# Добавить модуль в initrd
-bash: Добавить: command not found
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ● Пересобираем образ initrd
-bash: ●: command not found
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# [root@otuslinux ~]# mkinitrd -f -v /boot/initramfs-$(un 
-ame -r).img $(uname -r)
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(unam[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r)[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).i[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).im[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $([1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(u[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(un[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(una[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(unam[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname[1P -r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname [1P-r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -[1Pr)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-
-Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-*** Including module: bash ***
-*** Including module: nss-softokn ***
-*** Including module: i18n ***
-*** Including module: drm ***
-*** Including module: plymouth ***
-*** Including module: dm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 60-persistent-storage-dm.rules
-Skipping udev rule: 55-dm.rules
-*** Including module: kernel-modules ***
-Omitting driver floppy
-*** Including module: lvm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 56-lvm.rules
-Skipping udev rule: 60-persistent-storage-lvm.rules
-*** Including module: qemu ***
-*** Including module: resume ***
-*** Including module: rootfs-block ***
-*** Including module: terminfo ***
-*** Including module: udev-rules ***
-Skipping udev rule: 40-redhat-cpu-hotplug.rules
-Skipping udev rule: 91-permissions.rules
-*** Including module: biosdevname ***
-*** Including module: systemd ***
-*** Including module: usrmount ***
-*** Including module: base ***
-*** Including module: fs-lib ***
-*** Including module: shutdown ***
-*** Including modules done ***
-*** Installing kernel module dependencies and firmware ***
-*** Installing kernel module dependencies and firmware done ***
-*** Resolving executable dependencies ***
-*** Resolving executable dependencies done***
-*** Hardlinking files ***
-*** Hardlinking files done ***
-*** Stripping files ***
-*** Stripping files done ***
-*** Generating early-microcode cpio image contents ***
-*** Constructing AuthenticAMD.bin ****
-*** No early-microcode cpio image needed ***
-*** Store current command line parameters ***
-*** Creating image file ***
-*** Creating image file done ***
-*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes 
-t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
-t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
-t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
-t
-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[C[C'
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep 'tes
-st'[K[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K
-Image: /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img: 14M
-========================================================================
-Version: dracut-033-535.el7
-
-dracut modules:
-bash
-nss-softokn
-i18n
-drm
-plymouth
-dm
-kernel-modules
-lvm
-qemu
-resume
-rootfs-block
-terminfo
-udev-rules
-biosdevname
-systemd
-usrmount
-base
-fs-lib
-shutdown
-========================================================================
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
-module_setup.sh  test.sh
 ]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mv module_setup.sh mv[Kodule_setup.sh [C[1P[1@-
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# dracut -f -v
+
+
+
+
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# dracut -f -v ############инициализируем новый модуль
 Executing: /sbin/dracut -f -v
 dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
 dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
@@ -1332,11 +1160,18 @@ Skipping udev rule: 91-permissions.rules
 *** Creating image file done ***
 *** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
 ]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes 
-t
+t  ####проверяем
+
+
+
 [01;31m[Ktest[m[K
 ]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# vi /etc/default/grub [K.c[K[K 
 module-setup.sh  test.sh          
-[root@localhost 01test]# vi /etc/default/grub 
+
+
+
+
+[root@localhost 01test]# vi /etc/default/grub   ####обновляем загрузчик
 module-setup.sh  test.sh          
 [root@localhost 01test]# vi /etc/default/grub [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi /etc/boo[1Pboo[1Pboo[1Pboo[1Pboo[C[C[Ct/grub
 grub/  grub2/ 
