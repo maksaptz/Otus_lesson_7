@@ -1,728 +1,0 @@
-Script started on Wed May 31 15:36:27 2023
-]0;root@localhost:~[?1034h[root@localhost ~]# l[Kvgs
-  VG   #PV #LV #SN Attr   VSize   VFree
-  test   1   2   0 wz--n- <38.97g    0 
-]0;root@localhost:~[root@localhost ~]# pwd
-/root
-]0;root@localhost:~[root@localhost ~]# yum install git iy
-Failed to set locale, defaulting to C
-Loaded plugins: fastestmirror
-Determining fastest mirrors
- * base: mirror.theory7.net
- * extras: ftp.nluug.nl
- * updates: mirror.vimexx.nl
-base                                                     | 3.6 kB     00:00     
-extras                                                   | 2.9 kB     00:00     
-updates                                                  | 2.9 kB     00:00     
-(2/4): base/7/x86_64/prima 0% [                 ]  0.0 B/s |    0 B   --:-- ETA (2/4): base/7/x86_64/prima 1% [                 ]  0.0 B/s | 340 kB   --:-- ETA (1/4): base/7/x86_64/group_gz                              | 153 kB   00:00     
-(3/4): extras/7/x86_64/pri 4% [-                ] 1.0 MB/s | 1.1 MB   00:25 ETA (2/4): extras/7/x86_64/primary_db                          | 249 kB   00:01     
-(3/4): base/7/x86_64/prima 6% [=                ] 1.1 MB/s | 1.8 MB   00:23 ETA (3/4): base/7/x86_64/prima 7% [=                ] 1.0 MB/s | 2.0 MB   00:24 ETA (3/4): base/7/x86_64/prima 10% [=-              ] 1.1 MB/s | 2.8 MB   00:21 ETA (4/4): updates/7/x86_64/pr 11% [=-              ] 1.1 MB/s | 3.2 MB   00:21 ETA (4/4): updates/7/x86_64/pr 12% [==              ] 1.1 MB/s | 3.6 MB   00:20 ETA (4/4): updates/7/x86_64/pr 14% [==              ] 1.1 MB/s | 3.9 MB   00:20 ETA (4/4): updates/7/x86_64/pr 15% [==              ] 1.1 MB/s | 4.2 MB   00:20 ETA (3/4): base/7/x86_64/prima 17% [==-             ] 1.1 MB/s | 4.7 MB   00:19 ETA (3/4): base/7/x86_64/prima 18% [==-             ] 1.1 MB/s | 5.0 MB   00:19 ETA (3/4): base/7/x86_64/prima 19% [===             ] 1.1 MB/s | 5.4 MB   00:19 ETA (3/4): base/7/x86_64/prima 20% [===             ] 1.1 MB/s | 5.6 MB   00:19 ETA (4/4): updates/7/x86_64/pr 21% [===             ] 1.1 MB/s | 5.9 MB   00:19 ETA (4/4): updates/7/x86_64/pr 22% [===-            ] 1.1 MB/s | 6.3 MB   00:19 ETA (4/4): updates/7/x86_64/pr 24% [===-            ] 1.1 MB/s | 6.6 MB   00:18 ETA (4/4): updates/7/x86_64/pr 25% [====            ] 1.1 MB/s | 6.9 MB   00:18 ETA (3/4): base/7/x86_64/prima 26% [====            ] 1.1 MB/s | 7.3 MB   00:17 ETA (3/4): base/7/x86_64/prima 28% [====-           ] 1.1 MB/s | 7.7 MB   00:17 ETA (3/4): base/7/x86_64/prima 29% [====-           ] 1.1 MB/s | 8.0 MB   00:17 ETA (3/4): base/7/x86_64/prima 30% [====-           ] 1.1 MB/s | 8.4 MB   00:17 ETA (4/4): updates/7/x86_64/pr 31% [=====           ] 1.1 MB/s | 8.7 MB   00:16 ETA (4/4): updates/7/x86_64/pr 33% [=====           ] 1.1 MB/s | 9.2 MB   00:16 ETA (4/4): updates/7/x86_64/pr 34% [=====-          ] 1.1 MB/s | 9.4 MB   00:16 ETA (4/4): updates/7/x86_64/pr 35% [=====-          ] 1.1 MB/s | 9.7 MB   00:16 ETA (3/4): base/7/x86_64/prima 36% [=====-          ] 1.1 MB/s | 9.9 MB   00:16 ETA (3/4): base/7/x86_64/prima 37% [=====-          ] 1.1 MB/s |  10 MB   00:16 ETA (3/4): base/7/x86_64/primary_db                            | 6.1 MB   00:09     
-(4/4): updates/7/x86_64/pr 38% [======          ] 1.0 MB/s |  11 MB   00:16 ETA (4/4): updates/7/x86_64/pr 39% [======          ] 1.0 MB/s |  11 MB   00:16 ETA (4/4): updates/7/x86_64/pr 39% [======          ] 1.0 MB/s |  11 MB   00:16 ETA (4/4): updates/7/x86_64/pr 40% [======          ] 984 kB/s |  11 MB   00:16 ETA (4/4): updates/7/x86_64/pr 41% [======-         ] 953 kB/s |  11 MB   00:17 ETA (4/4): updates/7/x86_64/pr 41% [======-         ] 930 kB/s |  11 MB   00:17 ETA (4/4): updates/7/x86_64/pr 42% [======-         ] 912 kB/s |  12 MB   00:17 ETA (4/4): updates/7/x86_64/pr 43% [======-         ] 897 kB/s |  12 MB   00:17 ETA (4/4): updates/7/x86_64/pr 44% [=======         ] 887 kB/s |  12 MB   00:17 ETA (4/4): updates/7/x86_64/pr 45% [=======         ] 882 kB/s |  12 MB   00:17 ETA (4/4): updates/7/x86_64/pr 45% [=======         ] 878 kB/s |  13 MB   00:17 ETA (4/4): updates/7/x86_64/pr 46% [=======         ] 864 kB/s |  13 MB   00:17 ETA (4/4): updates/7/x86_64/pr 47% [=======-        ] 860 kB/s |  13 MB   00:17 ETA (4/4): updates/7/x86_64/pr 48% [=======-        ] 857 kB/s |  13 MB   00:16 ETA (4/4): updates/7/x86_64/pr 49% [=======-        ] 859 kB/s |  14 MB   00:16 ETA (4/4): updates/7/x86_64/pr 50% [========        ] 862 kB/s |  14 MB   00:16 ETA (4/4): updates/7/x86_64/pr 51% [========        ] 866 kB/s |  14 MB   00:15 ETA (4/4): updates/7/x86_64/pr 52% [========        ] 878 kB/s |  14 MB   00:15 ETA (4/4): updates/7/x86_64/pr 54% [========-       ] 892 kB/s |  15 MB   00:14 ETA (4/4): updates/7/x86_64/pr 55% [========-       ] 907 kB/s |  15 MB   00:13 ETA (4/4): updates/7/x86_64/pr 56% [=========       ] 925 kB/s |  15 MB   00:13 ETA (4/4): updates/7/x86_64/pr 58% [=========       ] 945 kB/s |  16 MB   00:12 ETA (4/4): updates/7/x86_64/pr 59% [=========       ] 961 kB/s |  16 MB   00:11 ETA (4/4): updates/7/x86_64/pr 60% [=========-      ] 988 kB/s |  17 MB   00:11 ETA (4/4): updates/7/x86_64/pr 62% [==========      ] 1.0 MB/s |  17 MB   00:10 ETA (4/4): updates/7/x86_64/pr 64% [==========      ] 1.0 MB/s |  18 MB   00:09 ETA (4/4): updates/7/x86_64/pr 65% [==========-     ] 1.0 MB/s |  18 MB   00:08 ETA (4/4): updates/7/x86_64/pr 67% [==========-     ] 1.1 MB/s |  18 MB   00:08 ETA (4/4): updates/7/x86_64/pr 69% [===========     ] 1.1 MB/s |  19 MB   00:07 ETA (4/4): updates/7/x86_64/pr 71% [===========     ] 1.1 MB/s |  19 MB   00:07 ETA (4/4): updates/7/x86_64/pr 72% [===========-    ] 1.2 MB/s |  20 MB   00:06 ETA (4/4): updates/7/x86_64/pr 74% [===========-    ] 1.2 MB/s |  20 MB   00:06 ETA (4/4): updates/7/x86_64/pr 75% [============    ] 1.1 MB/s |  21 MB   00:05 ETA (4/4): updates/7/x86_64/pr 76% [============    ] 1.1 MB/s |  21 MB   00:05 ETA (4/4): updates/7/x86_64/pr 77% [============    ] 1.1 MB/s |  21 MB   00:05 ETA (4/4): updates/7/x86_64/pr 78% [============-   ] 1.1 MB/s |  22 MB   00:05 ETA (4/4): updates/7/x86_64/pr 80% [============-   ] 1.1 MB/s |  22 MB   00:04 ETA (4/4): updates/7/x86_64/pr 81% [=============   ] 1.1 MB/s |  22 MB   00:04 ETA (4/4): updates/7/x86_64/pr 82% [=============   ] 1.1 MB/s |  23 MB   00:04 ETA (4/4): updates/7/x86_64/pr 83% [=============   ] 1.1 MB/s |  23 MB   00:03 ETA (4/4): updates/7/x86_64/pr 85% [=============-  ] 1.1 MB/s |  23 MB   00:03 ETA (4/4): updates/7/x86_64/pr 86% [=============-  ] 1.1 MB/s |  24 MB   00:03 ETA (4/4): updates/7/x86_64/pr 87% [=============-  ] 1.1 MB/s |  24 MB   00:03 ETA (4/4): updates/7/x86_64/pr 88% [==============  ] 1.1 MB/s |  24 MB   00:02 ETA (4/4): updates/7/x86_64/pr 90% [==============  ] 1.1 MB/s |  25 MB   00:02 ETA (4/4): updates/7/x86_64/pr 91% [==============- ] 1.1 MB/s |  25 MB   00:02 ETA (4/4): updates/7/x86_64/pr 92% [==============- ] 1.1 MB/s |  25 MB   00:01 ETA (4/4): updates/7/x86_64/pr 94% [=============== ] 1.1 MB/s |  26 MB   00:01 ETA (4/4): updates/7/x86_64/pr 95% [=============== ] 1.1 MB/s |  26 MB   00:01 ETA (4/4): updates/7/x86_64/pr 96% [=============== ] 1.1 MB/s |  26 MB   00:00 ETA (4/4): updates/7/x86_64/pr 98% [===============-] 1.1 MB/s |  27 MB   00:00 ETA (4/4): updates/7/x86_64/pr 99% [===============-] 1.1 MB/s |  27 MB   00:00 ETA (4/4): updates/7/x86_64/primary_db                         |  21 MB   00:25     
-No package [1miy(B[m available.
-Resolving Dependencies
---> Running transaction check
----> Package git.x86_64 0:1.8.3.1-25.el7_9 will be installed
---> Processing Dependency: perl-Git = 1.8.3.1-25.el7_9 for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl >= 5.008 for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(warnings) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(vars) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(strict) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(lib) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(Git) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(Getopt::Long) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::stat) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Temp) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Spec) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Path) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Find) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Copy) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(File::Basename) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(Exporter) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: perl(Error) for package: git-1.8.3.1-25.el7_9.x86_64
---> Processing Dependency: /usr/bin/perl for package: git-1.8.3.1-25.el7_9.x86_64
---> Running transaction check
----> Package perl.x86_64 4:5.16.3-299.el7_9 will be installed
---> Processing Dependency: perl-libs = 4:5.16.3-299.el7_9 for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl-macros for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl-libs for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-299.el7_9.x86_64
---> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-299.el7_9.x86_64
----> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
----> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
----> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
----> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
----> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
---> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
---> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
----> Package perl-Git.noarch 0:1.8.3.1-25.el7_9 will be installed
----> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
----> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
---> Running transaction check
----> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
----> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
----> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
---> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
---> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
----> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
---> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
---> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
----> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
----> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
----> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
----> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
----> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
----> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
----> Package perl-constant.noarch 0:1.27-2.el7 will be installed
----> Package perl-libs.x86_64 4:5.16.3-299.el7_9 will be installed
----> Package perl-macros.x86_64 4:5.16.3-299.el7_9 will be installed
----> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
----> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
---> Running transaction check
----> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
----> Package perl-Pod-Escapes.noarch 1:1.04-299.el7_9 will be installed
----> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
---> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
---> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
----> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
---> Running transaction check
----> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
----> Package perl-parent.noarch 1:0.225-244.el7 will be installed
---> Finished Dependency Resolution
-
-Dependencies Resolved
-
-================================================================================
- Package                    Arch       Version                Repository   Size
-================================================================================
-Installing:
- git                        x86_64     1.8.3.1-25.el7_9       updates     4.4 M
-Installing for dependencies:
- perl                       x86_64     4:5.16.3-299.el7_9     updates     8.0 M
- perl-Carp                  noarch     1.26-244.el7           base         19 k
- perl-Encode                x86_64     2.51-7.el7             base        1.5 M
- perl-Error                 noarch     1:0.17020-2.el7        base         32 k
- perl-Exporter              noarch     5.68-3.el7             base         28 k
- perl-File-Path             noarch     2.09-2.el7             base         26 k
- perl-File-Temp             noarch     0.23.01-3.el7          base         56 k
- perl-Filter                x86_64     1.49-3.el7             base         76 k
- perl-Getopt-Long           noarch     2.40-3.el7             base         56 k
- perl-Git                   noarch     1.8.3.1-25.el7_9       updates      56 k
- perl-HTTP-Tiny             noarch     0.033-3.el7            base         38 k
- perl-PathTools             x86_64     3.40-5.el7             base         82 k
- perl-Pod-Escapes           noarch     1:1.04-299.el7_9       updates      52 k
- perl-Pod-Perldoc           noarch     3.20-4.el7             base         87 k
- perl-Pod-Simple            noarch     1:3.28-4.el7           base        216 k
- perl-Pod-Usage             noarch     1.63-3.el7             base         27 k
- perl-Scalar-List-Utils     x86_64     1.27-248.el7           base         36 k
- perl-Socket                x86_64     2.010-5.el7            base         49 k
- perl-Storable              x86_64     2.45-3.el7             base         77 k
- perl-TermReadKey           x86_64     2.30-20.el7            base         31 k
- perl-Text-ParseWords       noarch     3.29-4.el7             base         14 k
- perl-Time-HiRes            x86_64     4:1.9725-3.el7         base         45 k
- perl-Time-Local            noarch     1.2300-2.el7           base         24 k
- perl-constant              noarch     1.27-2.el7             base         19 k
- perl-libs                  x86_64     4:5.16.3-299.el7_9     updates     690 k
- perl-macros                x86_64     4:5.16.3-299.el7_9     updates      44 k
- perl-parent                noarch     1:0.225-244.el7        base         12 k
- perl-podlators             noarch     2.5.1-3.el7            base        112 k
- perl-threads               x86_64     1.87-4.el7             base         49 k
- perl-threads-shared        x86_64     1.43-6.el7             base         39 k
-
-Transaction Summary
-================================================================================
-Install  1 Package (+30 Dependent packages)
-
-Total download size: 16 M
-Installed size: 59 M
-Is this ok [y/d/N]: y
-Downloading packages:
-(2/31): perl-5.16.3-299.el 0% [                 ]  0.0 B/s |    0 B   --:-- ETA warning: /var/cache/yum/x86_64/7/base/packages/perl-Carp-1.26-244.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
-Public key for perl-Carp-1.26-244.el7.noarch.rpm is not installed
-(1/31): perl-Carp-1.26-244.el7.noarch.rpm                  |  19 kB   00:00     
-(2/31): perl-Error-0.17020-2.el7.noarch.rpm                |  32 kB   00:00     
-(3/31): perl-Exporter-5.68-3.el7.noarch.rpm                |  28 kB   00:00     
-(4/31): perl-File-Path-2.09-2.el7.noarch.rpm               |  26 kB   00:00     
-(5/31): perl-File-Temp-0.23.01-3.el7.noarch.rpm            |  56 kB   00:00     
-(7/31): perl-5.16.3-299.el 2% [-                ]  0.0 B/s | 485 kB   --:-- ETA (6/31): perl-Getopt-Long-2.40-3.el7.noarch.rpm             |  56 kB   00:00     
-(7/31): perl-Filter-1.49-3.el7.x86_64.rpm                  |  76 kB   00:00     
-(9/31): perl-5.16.3-299.el 8% [=                ] 1.3 MB/s | 1.3 MB   00:11 ETA (9/31): perl-5.16.3-299.el 10% [=-              ] 1.3 MB/s | 1.7 MB   00:11 ETA (8/31): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm              |  38 kB   00:00     
-(11/31): perl-Encode-2.51- 12% [=-              ] 1.2 MB/s | 1.9 MB   00:11 ETA (9/31): perl-PathTools-3.40-5.el7.x86_64.rpm               |  82 kB   00:00     
-(12/31): perl-Encode-2.51- 15% [==              ] 1.2 MB/s | 2.4 MB   00:10 ETA Public key for perl-Git-1.8.3.1-25.el7_9.noarch.rpm is not installed
-(10/31): perl-Git-1.8.3.1-25.el7_9.noarch.rpm              |  56 kB   00:01     
-(11/31): perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm        |  52 kB   00:00     
-(14/31): perl-Encode-2.51- 18% [===             ] 1.2 MB/s | 3.0 MB   00:10 ETA (15/31): perl-Pod-Perldoc- 21% [===             ] 1.3 MB/s | 3.4 MB   00:09 ETA (12/31): perl-Pod-Simple-3.28-4.el7.noarch.rpm             | 216 kB   00:00     
-(13/31): perl-Pod-Usage-1.63-3.el7.noarch.rpm              |  27 kB   00:00     
-(14/31): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm            |  87 kB   00:00     
-(15/31): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm    |  36 kB   00:00     
-(19/31): perl-Socket-2.010 23% [===-            ] 1.2 MB/s | 3.8 MB   00:09 ETA (16/31): perl-Socket-2.010-5.el7.x86_64.rpm                |  49 kB   00:00     
-(17/31): perl-Storable-2.45-3.el7.x86_64.rpm               |  77 kB   00:00     
-(18/31): perl-Text-ParseWords-3.29-4.el7.noarch.rpm        |  14 kB   00:00     
-(19/31): perl-TermReadKey-2.30-20.el7.x86_64.rpm           |  31 kB   00:00     
-(23/31): perl-Time-HiRes-1 26% [====            ] 1.3 MB/s | 4.2 MB   00:09 ETA (20/31): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm           |  45 kB   00:00     
-(21/31): perl-Time-Local-1.2300-2.el7.noarch.rpm           |  24 kB   00:00     
-(22/31): perl-constant-1.27-2.el7.noarch.rpm               |  19 kB   00:00     
-(26/31): perl-libs-5.16.3- 28% [====-           ] 1.2 MB/s | 4.5 MB   00:09 ETA (27/31): perl-macros-5.16. 30% [====-           ] 1.2 MB/s | 4.8 MB   00:09 ETA (23/31): perl-macros-5.16.3-299.el7_9.x86_64.rpm           |  44 kB   00:00     
-(24/31): perl-parent-0.225-244.el7.noarch.rpm              |  12 kB   00:00     
-(29/31): perl-podlators-2. 32% [=====           ] 1.2 MB/s | 5.1 MB   00:09 ETA (25/31): perl-podlators-2.5.1-3.el7.noarch.rpm             | 112 kB   00:00     
-(30/31): perl-threads-1.87 35% [=====-          ] 1.2 MB/s | 5.6 MB   00:08 ETA (26/31): perl-threads-1.87-4.el7.x86_64.rpm                |  49 kB   00:00     
-(31/31): perl-threads-shar 37% [======          ] 1.2 MB/s | 6.0 MB   00:08 ETA (27/31): perl-threads-shared-1.43-6.el7.x86_64.rpm         |  39 kB   00:00     
-(28/31): perl-Encode-2.51-7.el7.x86_64.rpm                 | 1.5 MB   00:05     
-(29/31): git-1.8.3.1-25.el 40% [======          ] 1.2 MB/s | 6.4 MB   00:07 ETA (29/31): git-1.8.3.1-25.el 41% [======-         ] 1.2 MB/s | 6.7 MB   00:07 ETA (29/31): git-1.8.3.1-25.el 44% [=======         ] 1.2 MB/s | 7.0 MB   00:07 ETA (29/31): git-1.8.3.1-25.el 46% [=======         ] 1.2 MB/s | 7.4 MB   00:07 ETA (29/31): perl-libs-5.16.3-299.el7_9.x86_64.rpm             | 690 kB   00:02     
-(31/31): perl-5.16.3-299.e 48% [=======-        ] 1.2 MB/s | 7.8 MB   00:06 ETA (31/31): perl-5.16.3-299.e 49% [=======-        ] 1.1 MB/s | 7.9 MB   00:07 ETA (31/31): perl-5.16.3-299.e 51% [========        ] 1.1 MB/s | 8.2 MB   00:07 ETA (31/31): perl-5.16.3-299.e 52% [========        ] 1.1 MB/s | 8.4 MB   00:06 ETA (30/31): git-1.8.3.1-25.el 54% [========-       ] 1.1 MB/s | 8.7 MB   00:06 ETA (30/31): git-1.8.3.1-25.el 57% [=========       ] 1.1 MB/s | 9.1 MB   00:06 ETA (30/31): git-1.8.3.1-25.el 59% [=========-      ] 1.1 MB/s | 9.5 MB   00:05 ETA (30/31): git-1.8.3.1-25.el 63% [==========      ] 1.1 MB/s |  10 MB   00:05 ETA (31/31): perl-5.16.3-299.e 66% [==========-     ] 1.2 MB/s |  11 MB   00:04 ETA (31/31): perl-5.16.3-299.e 68% [===========     ] 1.2 MB/s |  11 MB   00:04 ETA (31/31): perl-5.16.3-299.e 70% [===========     ] 1.1 MB/s |  11 MB   00:04 ETA (31/31): perl-5.16.3-299.e 72% [===========-    ] 1.1 MB/s |  12 MB   00:03 ETA (30/31): git-1.8.3.1-25.el7_9.x86_64.rpm                   | 4.4 MB   00:10     
-(31/31): perl-5.16.3-299.e 76% [============    ] 1.1 MB/s |  12 MB   00:03 ETA (31/31): perl-5.16.3-299.e 77% [============    ] 1.1 MB/s |  12 MB   00:03 ETA (31/31): perl-5.16.3-299.e 79% [============-   ] 1.1 MB/s |  13 MB   00:02 ETA (31/31): perl-5.16.3-299.e 82% [=============   ] 1.1 MB/s |  13 MB   00:02 ETA (31/31): perl-5.16.3-299.e 85% [=============-  ] 1.1 MB/s |  14 MB   00:02 ETA (31/31): perl-5.16.3-299.e 87% [==============  ] 1.1 MB/s |  14 MB   00:01 ETA (31/31): perl-5.16.3-299.e 90% [==============  ] 1.2 MB/s |  14 MB   00:01 ETA (31/31): perl-5.16.3-299.e 92% [==============- ] 1.2 MB/s |  15 MB   00:00 ETA (31/31): perl-5.16.3-299.e 94% [=============== ] 1.1 MB/s |  15 MB   00:00 ETA (31/31): perl-5.16.3-299.e 95% [=============== ] 1.1 MB/s |  15 MB   00:00 ETA (31/31): perl-5.16.3-299.e 97% [===============-] 1.1 MB/s |  15 MB   00:00 ETA (31/31): perl-5.16.3-299.e 99% [===============-] 1.1 MB/s |  16 MB   00:00 ETA (31/31): perl-5.16.3-299.el7_9.x86_64.rpm                  | 8.0 MB   00:14     
---------------------------------------------------------------------------------
-Total                                              1.1 MB/s |  16 MB  00:14     
-Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-Importing GPG key 0xF4A80EB5:
- Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
- Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
- Package    : centos-release-7-5.1804.el7.centos.x86_64 (@anaconda)
- From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
-Is this ok [y/N]: y
-Running transaction check
-Running transaction test
-Transaction test succeeded
-Running transaction
-  Installing : 1:perl-parent-0.225-244.el7 [                            ]  1/31  Installing : 1:perl-parent-0.225-244.el7 [########                    ]  1/31  Installing : 1:perl-parent-0.225-244.el7 [#################           ]  1/31  Installing : 1:perl-parent-0.225-244.el7 [########################### ]  1/31  Installing : 1:perl-parent-0.225-244.el7.noarch                          1/31 
-  Installing : perl-HTTP-Tiny-0.033-3.el7. [                            ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [##                          ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [#######                     ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [############                ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [##############              ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [###############             ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7. [########################### ]  2/31  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                           2/31 
-  Installing : perl-podlators-2.5.1-3.el7. [                            ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [#                           ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [##                          ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [########                    ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [#########                   ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [##########                  ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [###########                 ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [############                ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [#############               ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [##############              ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [###############             ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [#####################       ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [######################      ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [##########################  ]  3/31  Installing : perl-podlators-2.5.1-3.el7. [########################### ]  3/31  Installing : perl-podlators-2.5.1-3.el7.noarch                           3/31 
-  Installing : perl-Pod-Perldoc-3.20-4.el7 [                            ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#                           ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [###                         ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [####                        ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#####                       ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [######                      ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#######                     ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [########                    ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#########                   ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [###################         ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [####################        ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#####################       ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#######################     ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [########################    ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [#########################   ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [##########################  ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7 [########################### ]  4/31  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                          4/31 
-  Installing : 1:perl-Pod-Escapes-1.04-299 [                            ]  5/31  Installing : 1:perl-Pod-Escapes-1.04-299 [#####                       ]  5/31  Installing : 1:perl-Pod-Escapes-1.04-299 [########################### ]  5/31  Installing : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                    5/31 
-  Installing : perl-Encode-2.51-7.el7.x86_ [                            ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#                           ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [##                          ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [###                         ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [####                        ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#####                       ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [######                      ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#######                     ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [########                    ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#########                   ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [##########                  ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [###########                 ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [############                ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#############               ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [##############              ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [###############             ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [################            ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#################           ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [##################          ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [###################         ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [####################        ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#####################       ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [######################      ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#######################     ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [########################    ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [#########################   ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [##########################  ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_ [########################### ]  6/31  Installing : perl-Encode-2.51-7.el7.x86_64                               6/31 
-  Installing : perl-Text-ParseWords-3.29-4 [                            ]  7/31  Installing : perl-Text-ParseWords-3.29-4 [#                           ]  7/31  Installing : perl-Text-ParseWords-3.29-4 [###                         ]  7/31  Installing : perl-Text-ParseWords-3.29-4 [########                    ]  7/31  Installing : perl-Text-ParseWords-3.29-4 [##############              ]  7/31  Installing : perl-Text-ParseWords-3.29-4 [########################### ]  7/31  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                      7/31 
-  Installing : perl-Pod-Usage-1.63-3.el7.n [                            ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [##                          ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [###                         ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [#####                       ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [#######                     ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [###########                 ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.n [########################### ]  8/31  Installing : perl-Pod-Usage-1.63-3.el7.noarch                            8/31 
-  Installing : 4:perl-macros-5.16.3-299.el [                            ]  9/31  Installing : 4:perl-macros-5.16.3-299.el [########################### ]  9/31  Installing : 4:perl-macros-5.16.3-299.el7_9.x86_64                       9/31 
-  Installing : perl-Storable-2.45-3.el7.x8 [                            ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [######                      ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [################            ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [###################         ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [########################    ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [#########################   ] 10/31  Installing : perl-Storable-2.45-3.el7.x8 [########################### ] 10/31  Installing : perl-Storable-2.45-3.el7.x86_64                            10/31 
-  Installing : perl-Exporter-5.68-3.el7.no [                            ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [#                           ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [##########                  ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [##############              ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [###############             ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [########################    ] 11/31  Installing : perl-Exporter-5.68-3.el7.no [########################### ] 11/31  Installing : perl-Exporter-5.68-3.el7.noarch                            11/31 
-  Installing : perl-constant-1.27-2.el7.no [                            ] 12/31  Installing : perl-constant-1.27-2.el7.no [#####                       ] 12/31  Installing : perl-constant-1.27-2.el7.no [#######                     ] 12/31  Installing : perl-constant-1.27-2.el7.no [########                    ] 12/31  Installing : perl-constant-1.27-2.el7.no [##############              ] 12/31  Installing : perl-constant-1.27-2.el7.no [########################### ] 12/31  Installing : perl-constant-1.27-2.el7.noarch                            12/31 
-  Installing : perl-Socket-2.010-5.el7.x86 [                            ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [########                    ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [###################         ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [#####################       ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [######################      ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [#########################   ] 13/31  Installing : perl-Socket-2.010-5.el7.x86 [########################### ] 13/31  Installing : perl-Socket-2.010-5.el7.x86_64                             13/31 
-  Installing : perl-Time-Local-1.2300-2.el [                            ] 14/31  Installing : perl-Time-Local-1.2300-2.el [#####                       ] 14/31  Installing : perl-Time-Local-1.2300-2.el [################            ] 14/31  Installing : perl-Time-Local-1.2300-2.el [####################        ] 14/31  Installing : perl-Time-Local-1.2300-2.el [########################### ] 14/31  Installing : perl-Time-Local-1.2300-2.el7.noarch                        14/31 
-  Installing : perl-Carp-1.26-244.el7.noar [                            ] 15/31  Installing : perl-Carp-1.26-244.el7.noar [#                           ] 15/31  Installing : perl-Carp-1.26-244.el7.noar [##                          ] 15/31  Installing : perl-Carp-1.26-244.el7.noar [#######                     ] 15/31  Installing : perl-Carp-1.26-244.el7.noar [########################### ] 15/31  Installing : perl-Carp-1.26-244.el7.noarch                              15/31 
-  Installing : 4:perl-Time-HiRes-1.9725-3. [                            ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3. [######                      ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3. [#############               ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3. [########################    ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3. [#########################   ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3. [########################### ] 16/31  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      16/31 
-  Installing : perl-PathTools-3.40-5.el7.x [                            ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [###                         ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [#####                       ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [######                      ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [#########                   ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [##########                  ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [#############               ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [###############             ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [################            ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [######################      ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [#######################     ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [########################    ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [#########################   ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [##########################  ] 17/31  Installing : perl-PathTools-3.40-5.el7.x [########################### ] 17/31  Installing : perl-PathTools-3.40-5.el7.x86_64                           17/31 
-  Installing : perl-Scalar-List-Utils-1.27 [                            ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [##                          ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [###                         ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [######                      ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [#################           ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [######################      ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [#######################     ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [########################    ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [##########################  ] 18/31  Installing : perl-Scalar-List-Utils-1.27 [########################### ] 18/31  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 18/31 
-  Installing : 1:perl-Pod-Simple-3.28-4.el [                            ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#                           ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [##                          ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [###                         ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [####                        ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#####                       ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [######                      ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#########                   ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#############               ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [##############              ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [###############             ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#################           ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [##################          ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [####################        ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#####################       ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#######################     ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [#########################   ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [##########################  ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el [########################### ] 19/31  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                        19/31 
-  Installing : perl-File-Temp-0.23.01-3.el [                            ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [##                          ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [#####                       ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [###########                 ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [##############              ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [#########################   ] 20/31  Installing : perl-File-Temp-0.23.01-3.el [########################### ] 20/31  Installing : perl-File-Temp-0.23.01-3.el7.noarch                        20/31 
-  Installing : perl-File-Path-2.09-2.el7.n [                            ] 21/31  Installing : perl-File-Path-2.09-2.el7.n [###                         ] 21/31  Installing : perl-File-Path-2.09-2.el7.n [####                        ] 21/31  Installing : perl-File-Path-2.09-2.el7.n [#########                   ] 21/31  Installing : perl-File-Path-2.09-2.el7.n [########################### ] 21/31  Installing : perl-File-Path-2.09-2.el7.noarch                           21/31 
-  Installing : perl-threads-shared-1.43-6. [                            ] 22/31  Installing : perl-threads-shared-1.43-6. [###############             ] 22/31  Installing : perl-threads-shared-1.43-6. [######################      ] 22/31  Installing : perl-threads-shared-1.43-6. [########################    ] 22/31  Installing : perl-threads-shared-1.43-6. [########################### ] 22/31  Installing : perl-threads-shared-1.43-6.el7.x86_64                      22/31 
-  Installing : perl-threads-1.87-4.el7.x86 [                            ] 23/31  Installing : perl-threads-1.87-4.el7.x86 [###########                 ] 23/31  Installing : perl-threads-1.87-4.el7.x86 [#####################       ] 23/31  Installing : perl-threads-1.87-4.el7.x86 [#######################     ] 23/31  Installing : perl-threads-1.87-4.el7.x86 [########################    ] 23/31  Installing : perl-threads-1.87-4.el7.x86 [########################### ] 23/31  Installing : perl-threads-1.87-4.el7.x86_64                             23/31 
-  Installing : perl-Filter-1.49-3.el7.x86_ [                            ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [##                          ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [######                      ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [#######                     ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [########                    ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [###########                 ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [##############              ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [###############             ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [#################           ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [##################          ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [###################         ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [####################        ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [#####################       ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [######################      ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [#######################     ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [#########################   ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [##########################  ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_ [########################### ] 24/31  Installing : perl-Filter-1.49-3.el7.x86_64                              24/31 
-  Installing : 4:perl-libs-5.16.3-299.el7_ [                            ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#                           ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [###                         ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [####                        ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#####                       ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [######                      ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#######                     ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [########                    ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#########                   ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [##########                  ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [############                ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#############               ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [##############              ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [###############             ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [################            ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#################           ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [##################          ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [###################         ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#####################       ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [######################      ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#######################     ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [########################    ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [#########################   ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [##########################  ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_ [########################### ] 25/31  Installing : 4:perl-libs-5.16.3-299.el7_9.x86_64                        25/31 
-  Installing : perl-Getopt-Long-2.40-3.el7 [                            ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [###                         ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [#####                       ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [######                      ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [#######                     ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [##########                  ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [########################    ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7 [########################### ] 26/31  Installing : perl-Getopt-Long-2.40-3.el7.noarch                         26/31 
-  Installing : 4:perl-5.16.3-299.el7_9.x86 [                            ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#                           ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [##                          ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [###                         ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [####                        ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#####                       ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [######                      ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#######                     ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [########                    ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#########                   ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [##########                  ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [###########                 ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [############                ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#############               ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [##############              ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [###############             ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [################            ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#################           ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [##################          ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [###################         ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [####################        ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#####################       ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [######################      ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#######################     ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [########################    ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [#########################   ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [##########################  ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86 [########################### ] 27/31  Installing : 4:perl-5.16.3-299.el7_9.x86_64                             27/31 
-  Installing : 1:perl-Error-0.17020-2.el7. [                            ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [#####                       ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [######                      ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [#######                     ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [########                    ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [############                ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [#############               ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [##############              ] 28/31  Installing : 1:perl-Error-0.17020-2.el7. [########################### ] 28/31  Installing : 1:perl-Error-0.17020-2.el7.noarch                          28/31 
-  Installing : perl-TermReadKey-2.30-20.el [                            ] 29/31  Installing : perl-TermReadKey-2.30-20.el [#######                     ] 29/31  Installing : perl-TermReadKey-2.30-20.el [######################      ] 29/31  Installing : perl-TermReadKey-2.30-20.el [#########################   ] 29/31  Installing : perl-TermReadKey-2.30-20.el [########################### ] 29/31  Installing : perl-TermReadKey-2.30-20.el7.x86_64                        29/31 
-  Installing : perl-Git-1.8.3.1-25.el7_9.n [                            ] 30/31  Installing : perl-Git-1.8.3.1-25.el7_9.n [####                        ] 30/31  Installing : perl-Git-1.8.3.1-25.el7_9.n [#####                       ] 30/31  Installing : perl-Git-1.8.3.1-25.el7_9.n [##########################  ] 30/31  Installing : perl-Git-1.8.3.1-25.el7_9.n [########################### ] 30/31  Installing : perl-Git-1.8.3.1-25.el7_9.noarch                           30/31 
-  Installing : git-1.8.3.1-25.el7_9.x86_64 [                            ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#                           ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [##                          ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [###                         ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [####                        ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#####                       ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [######                      ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#######                     ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [########                    ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#########                   ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [##########                  ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [###########                 ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [############                ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#############               ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [##############              ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [###############             ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [################            ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#################           ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [##################          ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [###################         ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [####################        ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#####################       ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [######################      ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#######################     ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [########################    ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [#########################   ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [##########################  ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64 [########################### ] 31/31  Installing : git-1.8.3.1-25.el7_9.x86_64                                31/31 
-  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                           1/31 
-  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                       2/31 
-  Verifying  : perl-Storable-2.45-3.el7.x86_64                             3/31 
-  Verifying  : perl-Exporter-5.68-3.el7.noarch                             4/31 
-  Verifying  : perl-constant-1.27-2.el7.noarch                             5/31 
-  Verifying  : perl-PathTools-3.40-5.el7.x86_64                            6/31 
-  Verifying  : 4:perl-macros-5.16.3-299.el7_9.x86_64                       7/31 
-  Verifying  : 1:perl-parent-0.225-244.el7.noarch                          8/31 
-  Verifying  : perl-Socket-2.010-5.el7.x86_64                              9/31 
-  Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                        10/31 
-  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                        11/31 
-  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                        12/31 
-  Verifying  : git-1.8.3.1-25.el7_9.x86_64                                13/31 
-  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                        14/31 
-  Verifying  : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                   15/31 
-  Verifying  : perl-Carp-1.26-244.el7.noarch                              16/31 
-  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                          17/31 
-  Verifying  : perl-Git-1.8.3.1-25.el7_9.noarch                           18/31 
-  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                      19/31 
-  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                 20/31 
-  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                           21/31 
-  Verifying  : perl-Encode-2.51-7.el7.x86_64                              22/31 
-  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                         23/31 
-  Verifying  : perl-podlators-2.5.1-3.el7.noarch                          24/31 
-  Verifying  : 4:perl-5.16.3-299.el7_9.x86_64                             25/31 
-  Verifying  : perl-File-Path-2.09-2.el7.noarch                           26/31 
-  Verifying  : perl-threads-1.87-4.el7.x86_64                             27/31 
-  Verifying  : perl-Filter-1.49-3.el7.x86_64                              28/31 
-  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                         29/31 
-  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                     30/31 
-  Verifying  : 4:perl-libs-5.16.3-299.el7_9.x86_64                        31/31 
-
-Installed:
-  git.x86_64 0:1.8.3.1-25.el7_9                                                 
-
-Dependency Installed:
-  perl.x86_64 4:5.16.3-299.el7_9                                                
-  perl-Carp.noarch 0:1.26-244.el7                                               
-  perl-Encode.x86_64 0:2.51-7.el7                                               
-  perl-Error.noarch 1:0.17020-2.el7                                             
-  perl-Exporter.noarch 0:5.68-3.el7                                             
-  perl-File-Path.noarch 0:2.09-2.el7                                            
-  perl-File-Temp.noarch 0:0.23.01-3.el7                                         
-  perl-Filter.x86_64 0:1.49-3.el7                                               
-  perl-Getopt-Long.noarch 0:2.40-3.el7                                          
-  perl-Git.noarch 0:1.8.3.1-25.el7_9                                            
-  perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
-  perl-PathTools.x86_64 0:3.40-5.el7                                            
-  perl-Pod-Escapes.noarch 1:1.04-299.el7_9                                      
-  perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
-  perl-Pod-Simple.noarch 1:3.28-4.el7                                           
-  perl-Pod-Usage.noarch 0:1.63-3.el7                                            
-  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  
-  perl-Socket.x86_64 0:2.010-5.el7                                              
-  perl-Storable.x86_64 0:2.45-3.el7                                             
-  perl-TermReadKey.x86_64 0:2.30-20.el7                                         
-  perl-Text-ParseWords.noarch 0:3.29-4.el7                                      
-  perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         
-  perl-Time-Local.noarch 0:1.2300-2.el7                                         
-  perl-constant.noarch 0:1.27-2.el7                                             
-  perl-libs.x86_64 4:5.16.3-299.el7_9                                           
-  perl-macros.x86_64 4:5.16.3-299.el7_9                                         
-  perl-parent.noarch 1:0.225-244.el7                                            
-  perl-podlators.noarch 0:2.5.1-3.el7                                           
-  perl-threads.x86_64 0:1.87-4.el7                                              
-  perl-threads-shared.x86_64 0:1.43-6.el7                                       
-
-Complete!
-]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/ac45d7a6c6856bae a348e64fac43faf0
-Cloning into 'ac45d7a6c6856baea348e64fac43faf0'...
-remote: Enumerating objects: 3, done.[K
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3[K
-Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
-]0;root@localhost:~[root@localhost ~]# ls
-[0m[38;5;27mac45d7a6c6856baea348e64fac43faf0[0m  original-ks.cfg  typescript1
-anaconda-ks.cfg                   typescript
-]0;root@localhost:~[root@localhost ~]# git clone https://gist.github.com/lalbrekht/e51b2580b47bb5a1 50bd1a002f16ae85
-Cloning into 'e51b2580b47bb5a150bd1a002f16ae85'...
-remote: Enumerating objects: 3, done.[K
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3[K
-Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
-]0;root@localhost:~[root@localhost ~]# ls
-[0m[38;5;27mac45d7a6c6856baea348e64fac43faf0[0m  [38;5;27me51b2580b47bb5a150bd1a002f16ae85[0m  typescript
-anaconda-ks.cfg                   original-ks.cfg                   typescript1
-]0;root@localhost:~[root@localhost ~]# ls ac45d7a6c6856baea348e64fac43faf0/
-gistfile1.txt
-]0;root@localhost:~[root@localhost ~]# cp ./c[Kac45d7a6c6856baea348e64fac43faf0/gistfile1.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmkdir /usr/lli[K[Kib/dracut/modules.d/01test
-]0;root@localhost:~[root@localhost ~]# cp ./ac45d7a6c6856baea348e64fac43faf0/
-gistfile1.txt  .git/          
-[root@localhost ~]# cp ./ac45d7a6c6856baea348e64fac43faf0/gid[Kf[K[Kistfile1.txt /usr/lib dracut[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cb 
-lib/     lib64/   libexec/ 
-[root@localhost ~]# cp ./ac45d7a6c6856baea348e64fac43faf0/gistfile1.txt /usr/lib /dracut/modules.d/01test/
-]0;root@localhost:~[root@localhost ~]# cd ./e51b2580b47bb5a150bd1a002f16ae85/.git/
-branches/ hooks/    info/     logs/     objects/  refs/     
-[root@localhost ~]# cd ./e51b2580b47bb5a150bd1a002f16ae85/.git/
-branches/ hooks/    info/     logs/     objects/  refs/     
-[root@localhost ~]# cd ./e51b2580b47bb5a150bd1a002f16ae85/.git/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd e51b2580b47bb5a150bd1a002f16ae85/
-]0;root@localhost:~/e51b2580b47bb5a150bd1a002f16ae85[root@localhost e51b2580b47bb5a150bd1a002f16ae85]# ;l[K[Kls
-gistfile1.txt
-]0;root@localhost:~/e51b2580b47bb5a150bd1a002f16ae85[root@localhost e51b2580b47bb5a150bd1a002f16ae85]# vim [K[K 
-gistfile1.txt  .git/          
-[root@localhost e51b2580b47bb5a150bd1a002f16ae85]# vi 
-gistfile1.txt  .git/          
-[root@localhost e51b2580b47bb5a150bd1a002f16ae85]# vi gistfile1.txt 
-[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"gistfile1.txt" 13L, 126C[1;1H#!/bin/bash
-
-check() {
-    return 0
-}
-
-depends() {
-    return 0
-}
-
-install() {
-    inst_hook cleanup 00 "${moddir}/test.sh"
-}
-[94m~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:~/e51b2580b47bb5a150bd1a002f16ae85[root@localhost e51b2580b47bb5a150bd1a002f16ae85]# cd [K[K[Kvi gistfile1.txt ls[Kcd e51b2580b47bb5a150bd1a002f116ae85/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp ./ac45d7a6c6856baea348e64fac43faf0/gistfile1.txt /usr/lib/dracut/modules.d/01test/[K[Amkdir /usr/lib/dracut/modules.d/01test[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls ac45d7a6c6856baea348e64fac4[2P3faf0/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ac45d7a6c6856baea348e64fac443faf0/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir /usr/lib/dracut/modules.d/01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d[1P/01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d/[1P01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d/0[1P1test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d/01[1Ptest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d/01t[1Pest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd /usr/lib/dracut/modules.d/01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /usr/lib/dracut/modules.d/01t[1Pest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc /usr/lib/dracut/modules.d/01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd /usr/lib/dracut/modules.d/01test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
-gistfile1.txt
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# cd[K[Kcd 01r[Kt
-bash: cd: 01t: No such file or directory
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# cd [K[K[Kvi gistfile1.txt 
-[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"gistfile1.txt" 22L, 334C[1;1H#!/bin/bash
-
-exec 0<>/dev/console 1<>/dev/console 2<>/dev/console
-cat <<'msgend'
-
-Hello! You are in dracut module!
-
- ___________________
-< I'm dracut module >
- -------------------
-   \
-    \[13;9H.--.[14;8H|o_o |[15;8H|:_/ |[16;7H//   \ \[17;6H(|     | )
-    /'\_   _/`\
-    \___)=(___/
-msgend
-sleep 10
-echo " continuing...."
-[94m~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mv gistfile1.txt gistfile1.txt [K[K[K[K[K[K[K[K[K[K[K[K[K[Ktest.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mv /rot[Kot/
-ac45d7a6c6856baea348e64fac43faf0/ e51b2580b47bb5a150bd1a002f16ae85/
-anaconda-ks.cfg                   original-ks.cfg
-.bash_history                     .pki/
-.bash_logout                      .tcshrc
-.bash_profile                     typescript
-.bashrc                           typescript1
-.cshrc                            
-[root@localhost 01test]# mv /root/e51b2580b47bb5a150bd1a002f16ae85/
-gistfile1.txt  .git/          
-[root@localhost 01test]# mv /root/e51b2580b47bb5a150bd1a002f16ae85/gs[Kistfile1.txt   .
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
-gistfile1.txt  test.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mv[K[Kvi gistfile1.txt 
-[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"gistfile1.txt" 13L, 126C[1;1H#!/bin/bash
-
-check() {
-    return 0
-}
-
-depends() {
-    return 0
-}
-
-install() {
-    inst_hook cleanup 00 "${moddir}/test.sh"
-}
-[94m~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[K[24;1H:[?12l[?25hq[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# v[Kmv gistfile1.txt module_setup.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
-module_setup.sh  test.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  dracut -f -v
-Executing: /sbin/dracut -f -v
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-*** Including module: bash ***
-*** Including module: nss-softokn ***
-*** Including module: i18n ***
-*** Including module: drm ***
-*** Including module: plymouth ***
-*** Including module: dm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 60-persistent-storage-dm.rules
-Skipping udev rule: 55-dm.rules
-*** Including module: kernel-modules ***
-Omitting driver floppy
-*** Including module: lvm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 56-lvm.rules
-Skipping udev rule: 60-persistent-storage-lvm.rules
-*** Including module: qemu ***
-*** Including module: resume ***
-*** Including module: rootfs-block ***
-*** Including module: terminfo ***
-*** Including module: udev-rules ***
-Skipping udev rule: 40-redhat-cpu-hotplug.rules
-Skipping udev rule: 91-permissions.rules
-*** Including module: biosdevname ***
-*** Including module: systemd ***
-*** Including module: usrmount ***
-*** Including module: base ***
-*** Including module: fs-lib ***
-*** Including module: shutdown ***
-*** Including modules done ***
-*** Installing kernel module dependencies and firmware ***
-*** Installing kernel module dependencies and firmware done ***
-*** Resolving executable dependencies ***
-*** Resolving executable dependencies done***
-*** Hardlinking files ***
-*** Hardlinking files done ***
-*** Stripping files ***
-*** Stripping files done ***
-*** Generating early-microcode cpio image contents ***
-*** Constructing AuthenticAMD.bin ****
-*** No early-microcode cpio image needed ***
-*** Store current command line parameters ***
-*** Creating image file ***
-*** Creating image file done ***
-*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# test[K[K[K[K lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# test[K[K[K[K lsinitrd -m /boot/initramfs-$(uname -r).img | grep testt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[C[C'
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# Добавить модуль в initrd
-bash: Добавить: command not found
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ● Пересобираем образ initrd
-bash: ●: command not found
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# [root@otuslinux ~]# mkinitrd -f -v /boot/initramfs-$(un ame -r).img $(uname -r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(unam[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r)[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).i[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).im[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $([1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(u[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(un[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(una[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(unam[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname[1P -r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname [1P-r)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkinitrd -f -v /boot/initramfs-$(uname -r).img $(uname -[1Pr)[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-*** Including module: bash ***
-*** Including module: nss-softokn ***
-*** Including module: i18n ***
-*** Including module: drm ***
-*** Including module: plymouth ***
-*** Including module: dm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 60-persistent-storage-dm.rules
-Skipping udev rule: 55-dm.rules
-*** Including module: kernel-modules ***
-Omitting driver floppy
-*** Including module: lvm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 56-lvm.rules
-Skipping udev rule: 60-persistent-storage-lvm.rules
-*** Including module: qemu ***
-*** Including module: resume ***
-*** Including module: rootfs-block ***
-*** Including module: terminfo ***
-*** Including module: udev-rules ***
-Skipping udev rule: 40-redhat-cpu-hotplug.rules
-Skipping udev rule: 91-permissions.rules
-*** Including module: biosdevname ***
-*** Including module: systemd ***
-*** Including module: usrmount ***
-*** Including module: base ***
-*** Including module: fs-lib ***
-*** Including module: shutdown ***
-*** Including modules done ***
-*** Installing kernel module dependencies and firmware ***
-*** Installing kernel module dependencies and firmware done ***
-*** Resolving executable dependencies ***
-*** Resolving executable dependencies done***
-*** Hardlinking files ***
-*** Hardlinking files done ***
-*** Stripping files ***
-*** Stripping files done ***
-*** Generating early-microcode cpio image contents ***
-*** Constructing AuthenticAMD.bin ****
-*** No early-microcode cpio image needed ***
-*** Store current command line parameters ***
-*** Creating image file ***
-*** Creating image file done ***
-*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes t
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep testt
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep testt
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep testt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'test[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[C[C'
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep 'tesst'[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K
-Image: /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img: 14M
-========================================================================
-Version: dracut-033-535.el7
-
-dracut modules:
-bash
-nss-softokn
-i18n
-drm
-plymouth
-dm
-kernel-modules
-lvm
-qemu
-resume
-rootfs-block
-terminfo
-udev-rules
-biosdevname
-systemd
-usrmount
-base
-fs-lib
-shutdown
-========================================================================
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# ls
-module_setup.sh  test.sh
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# mv module_setup.sh mv[Kodule_setup.sh [C[1P[1@-
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# dracut -f -v
-Executing: /sbin/dracut -f -v
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
-dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
-dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
-dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
-dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
-dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
-*** Including module: bash ***
-*** Including module: test ***
-*** Including module: nss-softokn ***
-*** Including module: i18n ***
-*** Including module: drm ***
-*** Including module: plymouth ***
-*** Including module: dm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 60-persistent-storage-dm.rules
-Skipping udev rule: 55-dm.rules
-*** Including module: kernel-modules ***
-Omitting driver floppy
-*** Including module: lvm ***
-Skipping udev rule: 64-device-mapper.rules
-Skipping udev rule: 56-lvm.rules
-Skipping udev rule: 60-persistent-storage-lvm.rules
-*** Including module: qemu ***
-*** Including module: resume ***
-*** Including module: rootfs-block ***
-*** Including module: terminfo ***
-*** Including module: udev-rules ***
-Skipping udev rule: 40-redhat-cpu-hotplug.rules
-Skipping udev rule: 91-permissions.rules
-*** Including module: biosdevname ***
-*** Including module: systemd ***
-*** Including module: usrmount ***
-*** Including module: base ***
-*** Including module: fs-lib ***
-*** Including module: shutdown ***
-*** Including modules done ***
-*** Installing kernel module dependencies and firmware ***
-*** Installing kernel module dependencies and firmware done ***
-*** Resolving executable dependencies ***
-*** Resolving executable dependencies done***
-*** Hardlinking files ***
-*** Hardlinking files done ***
-*** Stripping files ***
-*** Stripping files done ***
-*** Generating early-microcode cpio image contents ***
-*** Constructing AuthenticAMD.bin ****
-*** No early-microcode cpio image needed ***
-*** Store current command line parameters ***
-*** Creating image file ***
-*** Creating image file done ***
-*** Creating initramfs image file '/boot/initramfs-3.10.0-862.2.3.el7.x86_64.img' done ***
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]#  lsinitrd -m /boot/initramfs-$(uname -r).img | grep tes t
-[01;31m[Ktest[m[K
-]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# vi /etc/default/grub [K.c[K[K 
-module-setup.sh  test.sh          
-[root@localhost 01test]# vi /etc/default/grub 
-module-setup.sh  test.sh          
-[root@localhost 01test]# vi /etc/default/grub [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi /etc/boo[1Pboo[1Pboo[1Pboo[1Pboo[C[C[Ct/grub
-grub/  grub2/ 
-[root@localhost 01test]# vi /boot/grub2/
-device.map  fonts/      grub.cfg    grubenv     i386-pc/    locale/
-[root@localhost 01test]# vi /boot/grub2/grub.cfg 
-[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"/boot/grub2/grub.cfg" 127L, 3589C[1;1H#
-# DO NOT EDIT THIS FILE
-#
-# It is automatically generated by grub2-mkconfig using templates
-# from /etc/grub.d and settings from /etc/default/grub
-#
-
-### BEGIN /etc/grub.d/00_header ###
-set pager=1
-
-if [ -s $prefix/grubenv ]; then
-  load_env
-fi
-if [ "${next_entry}" ] ; then
-   set default="${next_entry}"
-   set next_entry=
-   save_env next_entry
-   set boot_once=true
-else
-   set default="${saved_entry}"
-fi
-
-if [ x"${feature_menuentry_id}" = xy ]; then[1;1H[?12l[?25h
-
-
-
-
-
-
-
-[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H
-
-
-
-
-
-
-
-[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H
-
-
-
-
-
-
-
-[8;1H[7;1H[6;1H[5;1H[4;1H
-
-
-
-
-[8;1H[7;1H[6;1H
-
-[7;1H[6;1H
-
-[7;1H
-[7;1H
-[7;1H
-
-[8;1H
-[8;1H
-[8;1H
-[8;1H
-[8;1H[7;1H
-[?25l[24;1H[K[24;1H/[?12l[?25hrghb[?25l[31msearch hit BOTTOM, continuing at TOP[m[97m[41mE486: Pattern not found: rghb[m[24;30H[K[8;1H[?12l[?25h
-
-
-[10;1H[9;1H[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[15;1H[14;1H[13;1H[12;1H[11;1H[10;1H[9;1H[8;1H[7;1H[6;1H[5;1H[4;1H[3;1H[2;1H[1;1H
-[1;1H[?25l[24;1H[K[24;1H/[?12l[?25hquier[?25l[24;6H[K[24;6H[?12l[?25ht[?25l[27m[m[H[2J[1;9Hinsmod xfs[2;9Hset root='hd0,msdos2'[3;9Hif [ x$feature_platform_search_hint = xy ]; then[4;11Hsearch --no-floppy --fs-uuid --set=root --hint='hd0,msdos2'  570897ca--[5;1He759-4c81-90cf-389da6eee4cc[6;9Helse[7;11Hsearch --no-floppy --fs-uuid --set=root 570897ca-e759-4c81-90cf-389da66[8;1Heee4cc[9;9Hfi[10;9Hlinux16 /vmlinuz-3.10.0-862.2.3.el7.x86_64 root=/dev/mapper/test-LogVol00[11;1H0 ro no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevnamm[12;1He=0 elevator=noop crashkernel=auto rd.lvm.lv=test/LogVol00 rd.lvm.lv=test/LogVoll[13;1H01 rhgb quiet[14;9Hinitrd16 /initramfs-3.10.0-862.2.3.el7.x86_64.img
-}
-if [ "x$default" = 'CentOS Linux (3.10.0-862.2.3.el7.x86_64) 7 (Core)' ]; then dd[17;1Hefault='Advanced options for CentOS Linux>CentOS Linux (3.10.0-862.2.3.el7.x86_66[18;1H4) 7 (Core)'; fi;
-### END /etc/grub.d/10_linux ###
-
-### BEGIN /etc/grub.d/20_linux_xen ###
-### END /etc/grub.d/20_linux_xen ###[13;9H[?12l[?25h[?25l[24;1H[1m-- INSERT --[13;9H[?12l[?25h[mquiet[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[24;1H[K[13;2H[?25l[?12l[?25h[?25l[24;1H/[?12l[?25hquiet[?25l[31msearch hit BOTTOM, continuing at TOP[m[97m[41mE486: Pattern not found: quiet[m[24;31H[K[13;2H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hwq[?25l"/boot/grub2/grub.cfg" 127L, 3578C written
-[?1l>[?12l[?25h[?1049l]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# exit
-exit
-
-Script done on Wed May 31 15:54:54 2023
