@@ -1,0 +1,70 @@
+Script started on Wed May 31 15:34:20 2023
+]0;root@localhost:~[?1034h[root@localhost ~]# vgs
+  VG         #PV #LV #SN Attr   VSize   VFree
+  VolGroup00   1   2   0 wz--n- <38.97g    0 
+]0;root@localhost:~[root@localhost ~]# old_name=''V'o'l'G'r'o'o'[1P'u'p'0'0'
+]0;root@localhost:~[root@localhost ~]# na[Kem[Kw_name=""t"e"s"t"
+]0;root@localhost:~[root@localhost ~]# vgrename -v $old_name $new_name;
+    Wiping cache of LVM-capable devices
+    Archiving volume group "VolGroup00" metadata (seqno 3).
+    Writing out updated volume group
+    Renaming "/dev/VolGroup00" to "/dev/test"
+    Loading table for VolGroup00-LogVol00 (253:0).
+    Suppressed VolGroup00-LogVol00 (253:0) identical table reload.
+    Suspending VolGroup00-LogVol00 (253:0) with device flush
+    Loading table for VolGroup00-LogVol00 (253:0).
+    Suppressed VolGroup00-LogVol00 (253:0) identical table reload.
+    Renaming VolGroup00-LogVol00 (253:0) to test-LogVol00
+    Resuming test-LogVol00 (253:0).
+    Loading table for VolGroup00-LogVol01 (253:1).
+    Suppressed VolGroup00-LogVol01 (253:1) identical table reload.
+    Suspending VolGroup00-LogVol01 (253:1) with device flush
+    Loading table for VolGroup00-LogVol01 (253:1).
+    Suppressed VolGroup00-LogVol01 (253:1) identical table reload.
+    Renaming VolGroup00-LogVol01 (253:1) to test-LogVol01
+    Resuming test-LogVol01 (253:1).
+    Creating volume group backup "/etc/lvm/backup/test" (seqno 4).
+  Volume group "VolGroup00" successfully renamed to "test"
+]0;root@localhost:~[root@localhost ~]# sed -i "s/\/${old_name}-/\/${new_name}-/g" /etc/fstab;
+]0;root@localhost:~[root@localhost ~]# sed -i "s/\([/=]\)${old_name}\([-/]\)/\1${new_name}\2/g" /bo ot/grub2/grub.cfg;
+]0;root@localhost:~[root@localhost ~]# dracut -f -v /boot/initramfs-$(uname -r).img $(uname -r);
+Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+*** Including module: bash ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+Omitting driver floppy
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: qemu ***
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** 
