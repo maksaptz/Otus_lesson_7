@@ -1,8 +1,8 @@
 Script started on Wed May 31 15:34:20 2023
-]0;root@localhost:~[?1034h[root@localhost ~]# vgs
+]0;root@localhost:~[?1034h[root@localhost ~]# vgs  ####смотрим существующую группу
   VG         #PV #LV #SN Attr   VSize   VFree
   VolGroup00   1   2   0 wz--n- <38.97g    0 
-]0;root@localhost:~[root@localhost ~]# old_name=''V'o'l'G'r'o'o'[1P'u'p'0'0'
+]0;root@localhost:~[root@localhost ~]# old_name=''V'o'l'G'r'o'o'[1P'u'p'0'0'  #### Здесь мы использовали скрипт указанный в README.md
 ]0;root@localhost:~[root@localhost ~]# na[Kem[Kw_name=""t"e"s"t"
 ]0;root@localhost:~[root@localhost ~]# vgrename -v $old_name $new_name;
     Wiping cache of LVM-capable devices
