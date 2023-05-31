@@ -26,7 +26,8 @@ Script started on Wed May 31 15:34:20 2023
     Creating volume group backup "/etc/lvm/backup/test" (seqno 4).
   Volume group "VolGroup00" successfully renamed to "test"
 ]0;root@localhost:~[root@localhost ~]# sed -i "s/\/${old_name}-/\/${new_name}-/g" /etc/fstab;
-]0;root@localhost:~[root@localhost ~]# sed -i "s/\([/=]\)${old_name}\([-/]\)/\1${new_name}\2/g" /bo ot/grub2/grub.cfg;
+]0;root@localhost:~[root@localhost ~]# sed -i "s/\([/=]\)${old_name}\([-/]\)/\1${new_name}\2/g" /bo 
+ot/grub2/grub.cfg;
 ]0;root@localhost:~[root@localhost ~]# dracut -f -v /boot/initramfs-$(uname -r).img $(uname -r);
 Executing: /sbin/dracut -f -v /boot/initramfs-3.10.0-862.2.3.el7.x86_64.img 3.10.0-862.2.3.el7.x86_64
 dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
